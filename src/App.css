@@ -5,14 +5,19 @@
     /* border-radius: 5px; */
     /* width: 100%; */
 }
-
-h1 {
-    /* margin:5px */
+#clist{
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 10px;
+    height: 230px;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content:center;
 }
-
 #title {
     width: 100%;
-    font-family: 'Bree Serif', serif;
     font-family: 'Ultra', serif;
     background-color: black;
 }
@@ -20,9 +25,32 @@ h1 {
     width: 40%;
     margin: auto ;
     position: relative;
-    top:50%
+    top:30%
+}
+#search input{
+    font-family: 'Ultra', serif;
+    padding:10px;
+    border-radius: 10px;
+    border: transparent;
+}
+input::placeholder{
+    color: white;
+}
+#search input:focus {
+    border:5px solid black;
 }
 * {
     padding: 0%;
     margin: 0
+}
+#card{
+    border-radius: 7px;
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+    border:transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#card:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

@@ -2,11 +2,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import {useParams,Link} from 'react-router-dom'
 import {C} from '../App'
 import Card from './Card'
+import { imgArr } from './Home'
 
 function MoviePg() {
-    let {mv,cos}=useContext(C)
-    // let {index}=useParams()
+    let {mv,cos,theme}=useContext(C)
+    // let {index,cindex}=useParams()
     let index=0
+    let cindex=0
     let [similar,setsimilar]=useState([])
     function recommend(){
         let k = []
@@ -19,7 +21,7 @@ function MoviePg() {
     },[])
     
   return (
-    <div>
+    <div style={{backgroundImage:`url(${imgArr[cindex]})`}} className='body'>
         <h1>{mv.title[index]}</h1>
         <h3>{mv.tagline[index]}</h3>
         <h3>{mv.vote_average[index]}</h3>
@@ -75,9 +77,9 @@ function MoviePg() {
         )}
         </div>
 
-        <div>
+        <div id='clist'>
             {similar.map((e,i)=>
-                <Card index={e} title={Object.values(mv.title).find((mv,ind)=>ind==e)} voteAvg={mv.vote_average[e] } key={i}  />
+                <Card index={e} title={Object.values(mv.title).find((mv,ind)=>ind==e)} voteAvg={mv.vote_average[e] } key={i} cindex={i} />
             )}
         </div>
     </div>
