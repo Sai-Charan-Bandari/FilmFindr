@@ -5,13 +5,14 @@ import { colorArr } from '../App'
 
 export const imgArr={
     20:'https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    21:'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    13:'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     9:'https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600',
     5:'https://images.pexels.com/photos/1024963/pexels-photo-1024963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     6:'https://images.pexels.com/photos/1659437/pexels-photo-1659437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     4:'https://images.pexels.com/photos/1270184/pexels-photo-1270184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     0:'https://images.pexels.com/photos/8273631/pexels-photo-8273631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     ,11:'https://images.pexels.com/photos/1498338/pexels-photo-1498338.jpeg?auto=compress&cs=tinysrgb&w=600'
+    ,12:'https://images.pexels.com/photos/33597/guitar-classical-guitar-acoustic-guitar-electric-guitar.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     ,10:'https://images.pexels.com/photos/759550/pexels-photo-759550.jpeg?auto=compress&cs=tinysrgb&w=600'
     ,7:'https://images.pexels.com/photos/818563/pexels-photo-818563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     ,8:'https://images.pexels.com/photos/673862/pexels-photo-673862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
@@ -50,6 +51,7 @@ function Home() {
             }}/>
             {/* <button onClick={findAvailableMovies}>Search</button> */}
         </div>
+        <div id='r'>Recommended</div>
         <div id='clist'>
         {available.map((e,i)=>
         <Card index={e[0]} title={e[1]} voteAvg={mv.vote_average[e[0]] } key={i} />

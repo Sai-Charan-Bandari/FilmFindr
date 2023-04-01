@@ -10,6 +10,8 @@ const genreArr={
     'Fantasy':9,
     'Western':10,
     'Comedy':11,
+    'Music':12,
+    'Animation':13,
     'Drama':2,
     'Family':2,
     'Adventure':3,
@@ -31,8 +33,9 @@ function Card({index,title,voteAvg}) {
     <button id='card' style={{backgroundColor:colorArr[cindex]}}
     onClick={()=>{
         console.log(cindex)
+        // console.log(mv.cast[index])
         settheme(cindex)
-        nav('/movie/')} }
+        nav('/movie/'+index+'/'+cindex)} }
     onMouseEnter={()=>{
         console.log(cindex)
         settheme(cindex)

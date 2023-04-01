@@ -10,13 +10,16 @@ export const colorArr = {
   1:'yellow',
   2:'orange',
   3:'red',
-  5:'white',
+  0:'white',
+  5:'coral',
   6:'green',
   7:'pink',
   8:'skyblue',
+  13:'skyblue',
   9:'lightorange',
   10:'coral',
   11:'goldenrod',
+  12:'chocolate',
 }
 
 function App() {
@@ -54,7 +57,7 @@ function App() {
 
 <Routes>
   <Route path='/' element={<Home/>}></Route>
-  <Route path='/movie/' element={<MoviePg/>}></Route>
+  <Route path='/movie/:index/:cindex' element={<MoviePg/>}></Route>
 </Routes>
   </BrowserRouter>
     </C.Provider>

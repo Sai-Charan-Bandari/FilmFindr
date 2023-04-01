@@ -2,22 +2,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 92vh;
-    /* border-radius: 5px; */
-    /* width: 100%; */
 }
 #clist{
     position: absolute;
     left:0;
     right: 0;
     bottom: 10px;
-    height: 230px;
-    overflow: scroll;
+    height: 210px;
+    overflow-y: scroll;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content:center;
 }
 #title {
     width: 100%;
+    padding-left: 5px;
     font-family: 'Ultra', serif;
     background-color: black;
 }
@@ -53,4 +52,14 @@ input::placeholder{
 }
 #card:hover{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-size: small;
+}
+#r{
+    background-color: yellow;
+    position: absolute;
+    left:20px;
+    bottom: 33vh;
+    border-radius: 10px;
+    padding: 7px;
+    font-family: 'Ultra', serif;
 }
