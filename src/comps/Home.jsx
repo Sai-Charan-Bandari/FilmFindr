@@ -32,7 +32,10 @@ function Home() {
         let t = Object.entries(mv.title).filter((e)=>e[1].toLowerCase().includes(v.toLowerCase()))
     //  console.log('available movies')
     //  console.log(t)
+    if(t.length>0)
     setavailable(t.slice(0,10))
+    else
+    setavailable(Object.entries(mv.title).slice(0,10))
      }
      
      useEffect(()=>{
@@ -43,7 +46,7 @@ function Home() {
     <>
     <div id='body' style={{backgroundImage:`url(${imgArr[theme]})`}}>
         <div id='search' style={{display:'flex',flexDirection:'column'}} >
-            <input type="text" value={v} style={{backgroundColor:colorArr[theme]}} 
+            <input type="text" value={v} style={{backgroundImage:`linear-gradient(to right,black,${colorArr[theme]})`}} 
             placeholder='Find me a movie'
             onChange={(e)=>{
                 setv(e.target.value);

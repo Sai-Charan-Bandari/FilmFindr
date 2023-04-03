@@ -27,10 +27,10 @@ function Card({index,title,voteAvg}) {
  let {settheme,mv}=useContext(C)
     let cindex=0
     cindex=genreArr[Object.values(mv.genres[index]).slice(-1)]
-    console.log('cindex is ',cindex)
+    // console.log('cindex is ',cindex)
 
   return (
-    <button id='card' style={{backgroundColor:colorArr[cindex]}}
+    <button id='card' 
     onClick={()=>{
         console.log(cindex)
         // console.log(mv.cast[index])
@@ -42,7 +42,9 @@ function Card({index,title,voteAvg}) {
         }}
         // onMouseLeave={()=>settheme(4)}
         >
-        <h1>{title}</h1>
+        <div style={{backgroundImage:`linear-gradient(${colorArr[cindex]},${colorArr[cindex]},white)`}}>
+        <h2>{title}</h2>
+        </div>
         <h1>{voteAvg}</h1>
     </button>
   )
